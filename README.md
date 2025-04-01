@@ -3,6 +3,9 @@
 ## Giriş
 Bilgisayar Grafikleri 2025 dönemi proje ödevi olarak, ışıklandırma ve primitive şekiller kullanılarak oluşturulan şekillerle sahne yapılmamız istendi. Bu repo ilgili ödevi ve raporu içermektedir.
 
+## Proje Raporu
+Proje raporuna Rapor.pdf dosyası ile ulaşabilirsiniz.
+
 ## Tanıtım Videosu
 Tanıtım videosuna yandaki linkten ulaşabilirsiniz. [Youtube](https://youtu.be/NkjfP-tNsag)
 
