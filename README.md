@@ -3,6 +3,9 @@
 ## Giriş
 Bilgisayar Grafikleri 2025 dönemi proje ödevi olarak, ışıklandırma ve primitive şekiller kullanılarak oluşturulan şekillerle sahne yapılmamız istendi. Bu repo ilgili ödevi ve raporu içermektedir.
 
+## Tanıtım Videosu
+<video controls src="Video/Video.mp4" title="Title"></video>
+
 ## 3 Farklı Kamera Açısından Görüntü
 ![1. Kamera Açısı](SS/0.png)
 ![2. Kamera Açısı](SS/1.png)
