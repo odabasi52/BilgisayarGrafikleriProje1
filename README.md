@@ -40,7 +40,7 @@ std::vector <Texture> woolTex(woolTextures, woolTextures + sizeof(woolTextures) 
 Mesh woolCube(woolVerts, cubeInd, woolTex);
 ```
 
-- Son olarak main loop içerisinde ilgili cismi çiz:
+- Son olarak main loop içerisinde ilgili cismi çizin:
 ```cpp
 // Draws different meshes
 coalCube.Draw(shaderProgram, camera);
