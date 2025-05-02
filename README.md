@@ -7,7 +7,7 @@ Bilgisayar Grafikleri 2025 dönemi proje ödevi olarak, ışıklandırma ve prim
 Proje raporuna Rapor.pdf dosyası ile ulaşabilirsiniz.
 
 ## Tanıtım Videosu
-Tanıtım videosuna yandaki linkten ulaşabilirsiniz. [Youtube](https://youtu.be/sWLjLhBytE0)
+Tanıtım videosuna yandaki linkten ulaşabilirsiniz. https://youtu.be/sWLjLhBytE0
 
 ## 3 Farklı Kamera Açısından Görüntü
 ![1. Kamera Açısı](SS/0.png)
