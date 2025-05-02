@@ -30,25 +30,10 @@ g++ -I glad/include  *.cpp glad/src/glad.c -lglfw -ldl -o main
 ## Texture ve Blok eklemek
 - İlk olarak ilgilendiğiniz Minecraft Blok Texture' unu [minecraft.wiki](https://minecraft.wiki/w/Category:Block_textures) üzerinden seçip indirin ve Resources klasörü içerisine koyun.
 
-- Sonrasında Headers/Objects.h içerisinde kendinize uygun olarak vertice ekleyin. Örneğin dosya içerisinde glassVertices' e bakarsak verilen Texture' u küpün 6 yüzünede çizen ve başlangıç noktamızda bulunan bir küp görüyoruz. İlgili offset değerleriyle küplerimizi x, y, z eksenlerinde öteleyebiliriz. Blokların tam oturması için ilgili eksenlerde birer birim hareket yapılmalıdır. Örnek:
+- Sonrasında texture' u Resources klasörüne kayıt edip aşağıdaki şekilde bloğunuzu oluşturabilirsiniz:
 ```cpp
-// offset_x tüm konum matrisleri ile toplanır veya çıkarılır.
-glm::vec3 offset_x(1.0f, 0.0f, 0.0f);
-Vertex diamondVertices[] =
-{ 
-    Vertex{glm::vec3(-0.5f, -0.5f, -0.5f) - offset_x, glm::vec3(1.0f, 1.0f, 1.0f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec2(0.0f, 0.0f)},  // Bottom-left
-    Vertex{glm::vec3( 0.5f, -0.5f, -0.5f) - offset_x, glm::vec3(1.0f, 1.0f, 1.0f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec2(1.0f, 0.0f)},  // Bottom-right
-    /*...... Devamı için kodu incele*/
-};
-```
-
-- Sonrasında main.cpp içerisinde aşağıdaki şekilde Textureların tanımlı olduğu yere gelip kendi Texture' unuzu ekleyin. Unutmayinki bazı Texturelar (cam) RGBA iken bazıları RGB' dir. Eğer Texture hatalı gözüküyorsa bunu göz önünde bulundurun.
-```cpp
-// Resources/<texture>
-Texture woolTextures[]{Texture("Resources/wool.png", "diffuse", 0, GL_RGB, GL_UNSIGNED_BYTE)};
-std::vector <Vertex> woolVerts(woolVertices, woolVertices + sizeof(woolVertices) / sizeof(Vertex));
-std::vector <Texture> woolTex(woolTextures, woolTextures + sizeof(woolTextures) / sizeof(Texture));
-Mesh woolCube(woolVerts, cubeInd, woolTex);
+Mesh coalCube = createCube(x, y, z, "Resources/coal.png", GL_RGB);
+Mesh glassCube = createCube(x, y, z, "Resources/glass.png", GL_RGBA);
 ```
 
 - Son olarak main loop içerisinde ilgili cismi çizin:

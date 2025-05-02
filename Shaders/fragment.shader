@@ -18,11 +18,11 @@ vec4 pointLight()
 {
     vec3 lightVector = lightPos - myCurPos;
     float distance = length(lightVector);
-    float a = 0.2f;
-    float b = 0.01f;
+    float a = 0.05f;
+    float b = 0.002f;
     float intensity = 1.0f / (a* distance * distance + b * distance + 1.0f);
 
-    float ambient = 0.2f;
+    float ambient = 0.3f;
 
     vec3 normal = normalize(myNormal);
     vec3 lightDir = normalize(lightVector);
@@ -45,7 +45,7 @@ vec4 directionalLight()
     vec3 normal = normalize(myNormal);
 
     // give specific direction
-    vec3 lightDir = normalize(vec3(1.0f, 1.0f, 0.0f));
+    vec3 lightDir = normalize(vec3(10.0f, 4.0f, 5.0f));
 
     float diffuse = max(dot(normal, lightDir), 0.0);
 
